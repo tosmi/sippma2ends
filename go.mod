@@ -1,3 +1,5 @@
-module stderr.at/sippma2ends
+module github.com/tosmi/sippma2ends
 
 go 1.18
+
+require github.com/lib/pq v1.10.7
