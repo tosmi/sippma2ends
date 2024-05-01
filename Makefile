@@ -1,7 +1,7 @@
 USERNAME := sippma
 PASSWORD := sippma
 DATABASE := sippma
-IMAGE :=registry.redhat.io/rhel8/postgresql-13
+IMAGE := registry.redhat.io/rhel9/postgresql-16:1-14
 PORT := 5432
 
 ID := $(shell podman ps -a -q -f "name=postgresql_database")
