@@ -1,4 +1,9 @@
+drop database if exists sippma;
+
+create database sippma;
+
 select * from consultations order by patient_id;
+-- select patient_id, date, diagnosis, content from consultations order by patient_id;
 select patient_id, date, diagnosis, content from consultations order by patient_id;
 
 select * from patients;
