@@ -1,6 +1,7 @@
 USERNAME := sippma
 PASSWORD := sippma
 DATABASE := sippma
+DUMP_DATE := 20241221212201
 IMAGE := registry.redhat.io/rhel9/postgresql-16:1-14
 PORT := 5432
 
@@ -24,3 +25,7 @@ endif
 .PHONY: start
 start:
 	podman start postgresql_database
+
+.PHONY: restore
+restore:
+	pg_restore --dbname=sippma ~/Downloads/$(DUMP_DATE)_sippma.dump --host=localhost --port=5432 --username=sippma -W
